@@ -15,19 +15,21 @@ function populateDropdown(){
 
     });
 
-    // initiating the graphs at the start
+    // initiate Graphs
     demInfo('940');
     buildGraph('940');
     
 }
 
-
-// the main function that will do the dirty work of getting everything goin'
+// OptionChange is the main function that drives everything
+// The OptionChange drives or initiliaizes the updates of the other table, bar chart and Bubble chart
+// By the change in the idnumber from the dataset
 function optionChanged(idNumber){
     console.log(idNumber)
     
     // call the funcions
-    demInfo(idNumber);
+    // note: as cpvered in Phil's study hall on 3/23/22, you can call a fucntion that is built later in the JS
+     demInfo(idNumber);
     buildGraph(idNumber);
 
 }
@@ -130,3 +132,6 @@ function buildGraph (idNumber) {
 }
 
 populateDropdown();
+
+//Originially, I attempted to build the the bonus gauge but kust cpoiuld not make it happen.
+//Thus, Bonus kipped for this.
